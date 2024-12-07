@@ -2,6 +2,15 @@
 Utilities for reading input files and processing data.
 """
 
+import os
+import sys
+
+def setup_path():
+    """Sets up the module search path."""
+    taskc_dir = os.path.dirname(__file__)
+    parent_dir = os.path.abspath(os.path.join(taskc_dir, '..', '..'))
+    sys.path.insert(0, parent_dir)
+
 def read_input_file(file_path):
     """Reads and returns lines from the specified input file."""
     with open(file_path, 'r', encoding='utf-8') as file:

@@ -1,18 +1,18 @@
 """
 Module for calculating total distances between lists.
 """
-from day_1_historian_hysteria.utils.helper import read_input_file, process_lines
-import os
-import sys
 
-task_dir = os.path.dirname(__file__)
-parent_dir = os.path.abspath(os.path.join(task_dir, '..', '..'))
-sys.path.insert(0, parent_dir)
+import os
+from day_1_historian_hysteria.utils.helper import read_input_file, process_lines, setup_path
+
+# Set up the module search path
+task_dir, parent_dir = setup_path()
 
 def dayonetaskone():
     """Runs the task for Day 1 Part One."""
-    task_dir = os.path.dirname(__file__)
-    input_file_path = os.path.join(task_dir, '..', 'input.txt')
+    # Function implementation
+    function_dir = os.path.dirname(__file__)
+    input_file_path = os.path.join(function_dir, '..', 'input.txt')
 
     lines = read_input_file(input_file_path)
     list1, list2 = process_lines(lines)
@@ -21,6 +21,7 @@ def dayonetaskone():
     print("Total Distance:", total_distance)
 
 def main():
+    """Main function for standalone execution."""
     dayonetaskone()
 
 if __name__ == "__main__":
