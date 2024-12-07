@@ -6,10 +6,11 @@ import os
 import sys
 
 def setup_path():
-    """Sets up the module search path."""
-    taskc_dir = os.path.dirname(__file__)
-    parent_dir = os.path.abspath(os.path.join(taskc_dir, '..', '..'))
-    sys.path.insert(0, parent_dir)
+    """Sets up the module search path and returns task and parent directories.""" 
+    task_dir = os.path.dirname(__file__) 
+    parent_dir = os.path.abspath(os.path.join(task_dir, '..', '..')) 
+    sys.path.insert(0, parent_dir) 
+    return task_dir, parent_dir
 
 def read_input_file(file_path):
     """Reads and returns lines from the specified input file."""
