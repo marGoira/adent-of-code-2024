@@ -2,10 +2,10 @@
 Module for calculating total distances between lists.
 """
 
-from day_1_historian_hysteria.utils.helper import ( 
-    setup_path, 
-    read_input_file, 
-    process_lines, 
+from day_1_historian_hysteria.utils.helper import( 
+    setup_path,
+    read_input_file,
+    process_lines,
     get_input_file_path )
 
 # Set up the module search path and get directories
