@@ -6,10 +6,10 @@ import os
 import sys
 
 def setup_path():
-    """Sets up the module search path and returns task and parent directories.""" 
-    task_dir = os.path.dirname(__file__) 
-    parent_dir = os.path.abspath(os.path.join(task_dir, '..', '..')) 
-    sys.path.insert(0, parent_dir) 
+    """Sets up the module search path and returns task and parent directories."""
+    task_dir = os.path.dirname(__file__)
+    parent_dir = os.path.abspath(os.path.join(task_dir, '..', '..'))
+    sys.path.insert(0, parent_dir)
     return task_dir, parent_dir
 
 def read_input_file(file_path):
@@ -28,3 +28,7 @@ def process_lines(lines):
     list1.sort()
     list2.sort()
     return list1, list2
+
+def get_input_file_path(task_dir):
+    """Constructs the input file path based on the task directory."""
+    return os.path.join(task_dir, '..', 'input.txt')
