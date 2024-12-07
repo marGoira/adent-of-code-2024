@@ -1,3 +1,9 @@
-# adent-of-code-2024
+# Advent-of-Code-2024
 
-day1 = --- Day 1: Historian Hysteria ---    completed
+Welcome to my Advent of Code 2024 repository! This project contains my solutions for the challenges presented on the [Advent of Code](https://adventofcode.com/) website.
+
+## Completed Puzzles
+
+- [x] **Day 1: Historian Hysteria** - *Completed*
+
+Stay tuned for more updates as I work through the remaining challenges. Feel free to follow my progress and explore the solutions!
