@@ -1,5 +1,6 @@
-# utils/helper.py
-import os
+"""
+Utilities for reading input files and processing data.
+"""
 
 def read_input_file(file_path):
     """Reads and returns lines from the specified input file."""

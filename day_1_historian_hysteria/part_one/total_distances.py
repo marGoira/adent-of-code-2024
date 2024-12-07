@@ -1,19 +1,18 @@
 """
 Module for calculating total distances between lists.
 """
-
+from day_1_historian_hysteria.utils.helper import read_input_file, process_lines
 import os
 import sys
 
-current_dir = os.path.dirname(__file__)
-parent_dir = os.path.abspath(os.path.join(current_dir, '..', '..'))
+task_dir = os.path.dirname(__file__)
+parent_dir = os.path.abspath(os.path.join(task_dir, '..', '..'))
 sys.path.insert(0, parent_dir)
-
-from Day_1_Historian_Hysteria.utils.helper import read_input_file, process_lines
 
 def dayonetaskone():
     """Runs the task for Day 1 Part One."""
-    input_file_path = os.path.join(parent_dir, 'Day_1_Historian_Hysteria', 'input.txt')
+    task_dir = os.path.dirname(__file__)
+    input_file_path = os.path.join(task_dir, '..', 'input.txt')
 
     lines = read_input_file(input_file_path)
     list1, list2 = process_lines(lines)
