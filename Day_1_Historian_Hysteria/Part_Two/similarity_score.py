@@ -3,29 +3,23 @@ Module for calculating similarity score between lists.
 """
 
 import os
+import sys
 
-def main():
-    current_dir = os.path.dirname(__file__) 
+current_dir = os.path.dirname(__file__)
+parent_dir = os.path.abspath(os.path.join(current_dir, '..', '..'))
+sys.path.insert(0, parent_dir)
+
+from Day_1_Historian_Hysteria.utils.helper import read_input_file, process_lines
+
+def dayonetasktwo():
+    """Runs the task for Day 1 Part Two."""
+    current_dir = os.path.dirname(__file__)
     input_file_path = os.path.join(current_dir, '..', 'input.txt')
 
-    with open(input_file_path, 'r', encoding='utf-8') as file:
-        lines = file.readlines()
-
-    # Lets declare two list.
-    list1 = []
-    list2 = []
-    sumList = []
+    lines = read_input_file(input_file_path)
+    list1, list2 = process_lines(lines)
+    sum_list = []
     result = 0
-
-    # Process each line and split numbers into the two lists
-    for line in lines:
-        numbers = line.split()
-        list1.append(int(numbers[0]))
-        list2.append(int(numbers[1]))
-
-    # So now I sort those list because we want to handle smallest - smallest etc.
-    list1.sort()
-    list2.sort()
 
     # Now we must check how many times left one is on the right side.
     for i in list1:
@@ -34,12 +28,15 @@ def main():
         for y in list2:
             if item == y:
                 multiplier += 1
-        sumList.append(item * multiplier)
+        sum_list.append(item * multiplier)
 
-    for x in sumList:
+    for x in sum_list:
         result += x
 
     print(result)
+
+def main():
+    dayonetasktwo()
 
 if __name__ == "__main__":
     main()
